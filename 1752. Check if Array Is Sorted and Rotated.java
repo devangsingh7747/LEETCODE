@@ -66,5 +66,9 @@ class Solution {
         // Test case 3
         int[] nums3 = {1, 2, 3};
         System.out.println("Is rotated sorted: " + sol.check(nums3)); // Output: false
+
+        // Test case 4
+        int[] nums4 = {1, 1, 1};
+        System.out.println("Is rotated sorted: " + sol.check(nums4)); // Output: true
     }
 }
