@@ -33,19 +33,23 @@ import java.util.*;
 
 class Solution {
     public int majorityElement(int[] nums) {
-        HashMap<Integer, Integer> freqCount = new HashMap<>();
-        int n = nums.length;
-        
-        for(int num : nums) {
-            int count = freqCount.getOrDefault(num, 0) + 1;
-            freqCount.put(num, count);
+        int candidate = nums[0];
+        int count = 0;
 
-            if(count > n/2) {
-                return num;
+        for(int i : nums) {
+            if(i == candidate) {
+                count++;
+            } else {
+                count--;
+
+                if(count == 0) {
+                    candidate = i;
+                    count++;
+                }
             }
         }
 
-        return -1;
+        return candidate;
     }
 
     // Driver Code
