@@ -37,6 +37,8 @@ Constraints:
 
 
 
+import java.util.*;
+
 class Solution {
     public int longestSubarray(int[] nums) {
         int largest = 0;
